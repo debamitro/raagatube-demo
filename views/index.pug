@@ -1,0 +1,20 @@
+html
+  head
+    title RaagaTube
+    link(href='css/basscss.css' rel='stylesheet')
+    link(href='css/btns.css' rel='stylesheet')
+  body
+    div(class='clearfix')
+      span(class='h1') RaagaTube
+    div(class='clearfix')
+      div(class='col col-4')
+        a(href='raaga/' class='h3 btn btn--m') Browse by Raaga
+        ul(class='list-reset')
+          - raagaList.forEach ( (item) => {
+          li
+            != item
+          - })
+      div(class='col col-4')
+        a(href='instrument/' class='h3 btn btn--m') Browse by Instrument
+      div(class='col col-4')
+        a(href='artist/' class='h3 btn btn--m') Browse by Artist

@@ -1,0 +1,17 @@
+html
+  head
+    title RaagaTube
+    link(href='../css/basscss.css' rel='stylesheet')
+    link(href='../css/btns.css' rel='stylesheet')
+  body
+    div(class='clearfix')
+      div(class='col col-4')
+        a(href='../' class='h1') RaagaTube
+      div(class='col col-8') Some kinda search
+
+    div(class='clearfix')
+      ul(class='list-reset')
+        - raagaList.forEach ( (item) => {
+        li
+          != item
+        - })
