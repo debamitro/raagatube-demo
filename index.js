@@ -27,16 +27,9 @@ app.listen (8000, () => {
     console.log ('app listening at port 8000')
 })
 
-const raagaVideoIds = {
-    yaman : [
-        'q0TSLv2zj5I',
-        'wHuqc3DO1Bo',
-        'xG7EsVR73J4'
-    ],
-    kafi : [ ],
-    bilawal : [ ],
-    bhairav : [ ]
-}
+const fs = require ('fs')
+const js_data = fs.readFileSync ('data.json')
+const raagaVideoIds = JSON.parse (js_data)
 
 function get_raagas (baseurl)
 {
