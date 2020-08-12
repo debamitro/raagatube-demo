@@ -1,5 +1,9 @@
 const express = require ('express')
 const app = express ()
+let app_port = process.env.PORT
+if (app_port == null || app_port == "") {
+    app_port = 8000
+}
 
 app.set ('view engine','pug')
 app.use (express.static ('static'))
@@ -28,8 +32,8 @@ app.get ('/instrument', (req, res) => res.render ('under_construction'))
 
 app.get ('/artist', (req, res) => res.render ('under_construction'))
 
-app.listen (8000, () => {
-    console.log ('app listening at port 8000')
+app.listen (app_port, () => {
+    console.log (`app listening on port ${app_port}`)
 })
 
 const fs = require ('fs')
