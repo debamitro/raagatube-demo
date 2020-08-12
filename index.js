@@ -8,6 +8,7 @@ app.get ('/', (req, res) => res.render ('index',
                                         {
                                             raagaList : get_raagas ('raaga/')
                                         }))
+app.get ('/about', (req, res) => res.render ('about'))
 
 app.get ('/raaga', (req, res) => res.render ('raagas',
                                              {
@@ -22,6 +23,10 @@ app.get ('/raaga/:raagaName', (req, res) => {
                     raagaList : get_raagas ( '' )
                 })
 })
+
+app.get ('/instrument', (req, res) => res.render ('under_construction'))
+
+app.get ('/artist', (req, res) => res.render ('under_construction'))
 
 app.listen (8000, () => {
     console.log ('app listening at port 8000')
