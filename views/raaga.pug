@@ -3,6 +3,7 @@ html
     title RaagaTube
     link(href='../css/basscss.css' rel='stylesheet')
     link(href='../css/btns.css' rel='stylesheet')
+    link(href='../css/style.css' rel='stylesheet')
   body
     div(class='clearfix')
       div(class='col col-4')
@@ -22,8 +23,10 @@ html
         div(class='clearfix h2 italic')
           = raagaName
         div(class='clearfix')
+          = videos.length + 'matches'
           ul(class='list-reset')
             - videos.forEach ( (item) => {
             li
               != item
             - })
+    include includes/footer.pug 

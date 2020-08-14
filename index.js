@@ -58,9 +58,8 @@ function get_yt_iframes_for (video_ids)
 {
     let yt_iframes = Array ()
     video_ids.forEach ( (item) => {
-        let iframe_code = '<iframe width=\"280\" height=\"157\" src=\"https://www.youtube.com/embed/' + item + '\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"></iframe>'
-        let href_code = '<a href=\"https://www.youtube.com/watch?v=' + item + '\">Watch on YouTube</a>'
-        yt_iframes.push (iframe_code + href_code)
+        let iframe_code = '<iframe width=\"600\" height=\"100\" src=\"https://www.youtube.com/embed/' + item + '\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"></iframe>'
+        yt_iframes.push (iframe_code)
     })
     return yt_iframes
 }
