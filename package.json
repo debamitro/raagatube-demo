@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build" : "node create_data.js > data.json",
     "serve": "node index.js",
     "watch": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "basscss": "^8.1.0",
+    "better-sqlite3": "^7.1.0",
     "btns": "^1.1.0",
     "color.css": "0.0.0-beta.0",
     "colors.css": "^3.0.0",
